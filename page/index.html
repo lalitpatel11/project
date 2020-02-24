@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="/css/global.css" type="text/css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <!-- <link rel="stylesheet" href="css/style11.css" type="text/css" /> -->
+  <link rel="stylesheet" href="css/style22.css" type="text/css" />
+ 
+
+  <title>Compiler</title>
+</head>
+
+<body onload="prepareTheme('Java Program')">
+  <!--natigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="#">Programming Competetion</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashbourd</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About us</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="reg.html"><span class="fa fa-user"></span> Sign Up</a></li>
+        <li><a href="login.html"><span class="fa fa-sign-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Container part-->
+  <div class="container-fluid">
+
+    <form class="m-3 ">
+      <button type="button" class="btn btn-primary btn-lg  btn-block mb-2">Hello Programmer
+        <div>Time left = <span id="timer"></span></div>
+      </button>
+
+
+      <div class="input-group mb-2">
+        <select class="custom-select" id="list" onchange="temp()" aria-label="Example select with button addon">
+          <option selected>Choose Langauges</option>
+          <option value="java">Java</option>
+          <option value="cplus">C++</option>
+          <option value="c">C</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+        </select>
+      </div>
+      <div class="input-group-prepend">
+        <span class="input-group-text">Write your code here</span>
+      </div>
+      <div class="input-group mb-2  ">
+       
+        <textarea id="playground" class="form-control" rows="25" style="color: white;background-color: black;"
+          aria-label="With textarea"></textarea>
+        
+      </div>
+      <button type="button" class="btn btn-primary mb-2 btn-lg">Execute</button>
+      <button type="button" class="btn btn-light mb-2 btn-lg">Cancel</button>
+
+      <div class="input-group-prepend">
+        <span class="input-group-text">Your Output</span>
+      </div>
+      <div class="input-group mb-2  ">
+
+        <textarea class="form-control" rows="10" aria-label="With textarea"></textarea>
+      </div>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small foot1">
+
+    <!-- Copyright -->
+    <div class="footer-copyright  text-center py-3">© 2020 Copyright:
+      <a href="aboutus.html"> About Us</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  </form>
+  <script>
+
+    function temp() {
+      getSelectedValue()
+    var code=  prepareTheme(code)
+     
+     
+    }
+
+    var editor;
+    function prepareTheme(defaultCodeText) {
+      editor = CodeMirror.fromTextArea(document.getElementById("playground"),
+        {
+          lineNumbers: true,
+          styleActiveLine: true,
+          matchBrackets: true
+        });
+      var theme = "blackboard";
+      editor.setOption("theme", theme);
+      $("playground").val("")
+    }
+
+    function refreshPage() {
+     
+      location.reload();
+      alert("Success");
+    }
+
+  </script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="javascript/clock.js"></script>
+  <script src="./javascript/js11.js"></script>
+  <script src="javascript/langselect.js"></script>
+  
+</body>
+
+</html>
